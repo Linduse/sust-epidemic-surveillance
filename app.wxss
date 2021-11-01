@@ -1,0 +1,16 @@
+/**app.wxss**/
+@import "/static/iconfont/icon.font.wxss";
+@import "/modules/colourUi/icon.wxss";
+@import "/modules/colourUi/main.wxss";
+@import "/modules/colourUi/animation.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  /* background-color: pink; */
+} 

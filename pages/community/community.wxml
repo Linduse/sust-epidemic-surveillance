@@ -1,0 +1,16 @@
+<!--pages/community/community.wxml-->
+<view class="contain">
+  <view class="header">
+    <text style="color: white; text-align: center;margin: auto;">各地出行疫情防控政策</text>
+    <!-- <image style="width: 100%;" src='/static/images/picture/zhinan.png' mode='widthFix'></image> -->
+  </view>
+  <view class="query">
+    <view>
+      <text class="left">出发地 :</text>
+    </view>
+    <view class="right">
+      <text>目的地 :</text>
+    </view>
+  </view>
+</view>
+

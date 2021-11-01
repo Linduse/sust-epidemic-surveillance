@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/community/community",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personal/personal",
+    "pages/news/news"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#10aeb5",
+    "navigationBarTitleText": "SUST疫情监测管理平台",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#10acb3",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/static/images/tubiao/tab/shouye.png",
+        "selectedIconPath": "/static/images/tubiao/current/shouye.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "/static/images/tubiao/tab/news.png",
+        "selectedIconPath": "/static/images/tubiao/current/news.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "指南",
+        "iconPath": "/static/images/tubiao/tab/community.png",
+        "selectedIconPath": "/static/images/tubiao/current/community.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "/static/images/tubiao/tab/zhongxin.png",
+        "selectedIconPath": "/static/images/tubiao/current/zhongxin.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
