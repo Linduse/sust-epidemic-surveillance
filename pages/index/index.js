@@ -1,5 +1,7 @@
 import request from '../../utils/request'
-import config from '../../utils/config'
+import * as echarts from '../../ec-canvas/echarts';
+import geoJson from './china';
+
 Page({
 
   /**
@@ -43,6 +45,12 @@ Page({
       dataList:dataList.data.list
     })
   },
+  //地图模块
+  //1.设置图标需要的option
+
+  //2.初始化图表
+
+
 
 
   /**
