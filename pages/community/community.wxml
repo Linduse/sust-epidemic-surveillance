@@ -1,2 +1,9 @@
 <!--pages/community/community.wxml-->
-<text>pages/community/community.wxml</text>
+<view class="contain">
+  <view class="header">
+    <text style="color: white; text-align: center;margin: auto;">各地出行疫情防控政策</text>
+    <!-- <image style="width: 100%;" src='/static/images/picture/zhinan.png' mode='widthFix'></image> -->
+  </view>
+  <view class="query">test</view>
+</view>
+

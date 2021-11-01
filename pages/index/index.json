@@ -3,5 +3,5 @@
     "i-button": "../../modules/dist/button/index",
     "chinamap":"../../components/chinamap/chinamap"
   },
-  "navigationBarTitleText": "主页"
+  "navigationBarTitleText": "疫情大数据"
 }
