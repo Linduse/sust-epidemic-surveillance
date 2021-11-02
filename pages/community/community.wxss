@@ -15,17 +15,90 @@
   text-align: center;
   line-height: 120rpx;
   /* margin: auto; */
-  background-image: linear-gradient(to top,rgb(66, 88, 161),rgb(8, 48, 179));
+  background-image: linear-gradient(to top,rgb(64, 82, 139),rgb(8, 48, 179));
   
 }
 .query {
-  width: 100%;
-  min-height: 300rpx;
+  width: auto;
+  min-height: 320rpx;
   height: auto;
-  margin: 0 20rpx 0 20rpx;
-  /* margin: 0rpx 0rpx 0rpx 0rpx; */
   background-color: #fff;
   position: absolute;
-  top: 130rpx;
-  
+  top: 120rpx;
+  right: 20rpx;
+  left: 20rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  padding: 40rpx 80rpx 0rpx 80rpx;
 }
+.picker{
+  padding: 13px;
+  background-color: #FFFFFF;
+}
+.top {
+  
+  display: flex;
+  height: 200rpx;
+}
+.left {
+  height: 10%;
+}
+.from {
+  font-size: 40rpx;
+  font-weight: bolder;
+  display: flex;
+}
+.icon {
+  height: 40%;
+  line-height: 250rpx;
+  text-align: center;
+  margin-left: auto;
+}
+.right {
+  height: 40%;
+  margin-left: auto;
+}
+.to {
+  font-size: 40rpx;
+  font-weight: bolder;
+  display: flex;
+}
+
+.leave {
+  width: auto;
+  min-height: 110rpx;
+  height: auto;
+  background-color: #fff;
+  position: absolute;
+  top: 500rpx;
+  right: 20rpx;
+  left: 20rpx;
+  padding: 40rpx 30rpx 0rpx 20rpx;
+}
+.join {
+  width: auto;
+  min-height: 110rpx;
+  height: auto;
+  background-color: #fff;
+  position: absolute;
+  top: 900rpx;
+  right: 20rpx;
+  left: 20rpx;
+  padding: 40rpx 30rpx 0rpx 20rpx;
+}
+.leave-top {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.leave-icon {
+  width: 45rpx;
+  height: 45rpx;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 46rpx;
+  background-color: rgb(27, 55, 177);
+  margin-left: 10rpx;
+}
+
