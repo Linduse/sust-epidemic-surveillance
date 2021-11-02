@@ -71,6 +71,22 @@
     margin-right: 20rpx;
   }
 
+  .mapButtonContainer{
+    display: flex;
+    margin: 10rpx 20rpx 20rpx 20rpx;
+  }
+  .mapContainer{
+    background-color: white;
+    margin: 10rpx 20rpx 20rpx 20rpx;
+  }
+  .lineButtonContainer{
+    display: flex;
+    margin: 10rpx 20rpx 20rpx 20rpx;
+  }
+  .lineContainer{
+    background-color: white;
+    margin: 10rpx 20rpx 20rpx 20rpx;
+  }
   
 
   

@@ -13,6 +13,10 @@ Component({
     dataPoint: {    // 为地图某个位置标点，本例中来实现，地图中某个省份清零后，为其省份插上小红旗
       type: Array,
       value: []
+    },
+    chinaMapTitle:{
+      type:String,
+      value:""
     }
   },
 
@@ -24,7 +28,8 @@ Component({
       lazyLoad: true //设置图表懒加载
     }
     ,
-    dataList: []
+    dataList: [],
+    chinaMapTitle:""
   },
   lifetimes: {
     attached: function() {
@@ -40,7 +45,9 @@ Component({
     // properties里接受的数据发生改变时执行
     observers:{
       'dataList':function(dataList){
-         this.getData(dataList) 
+        if(dataList.length > 0){
+          this.getData(dataList) 
+        }
       }
     },
 
@@ -48,11 +55,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-      getData(dataList) {
-          this.initChart(dataList);
+      getData(dataList,chinaMapTitle) {
+          this.initChart(dataList,this.data.chinaMapTitle);
       },
-      initChart(dataList) {
-        console.log(2222)
+      initChart(dataList,chinaMapTitle) {
         this.oneComponent = this.selectComponent('#mychart-dom-area');
           this.oneComponent.init((canvas, width, height, dpr) => {
             console.log(3333)
@@ -67,12 +73,25 @@ Component({
   const option = {
     tooltip: {
       trigger: 'item',
-      formatter: '{b}: {c}'
+      formatter: function(e, t, n) {
+        return '地区：' + e.data.name + '\n确诊：' + e.data.value
+      },
+      textStyle:{
+        align:'left'
+      }
     },
-
+    title: {
+      text: chinaMapTitle,
+      textStyle: {
+        color: '#000',
+        fontSize: 15
+    },
+      x: 'center'
+    },
+    
     visualMap: {
       min: 0,
-      max: 100,
+      max: chinaMapTitle=="中国疫情累计确诊地图"? 2000:200,
       left: 'left',
       top: 'bottom',
       text: ['高', '低'], // 文本，默认为数值文本
