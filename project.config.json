@@ -5,7 +5,7 @@
   },
   "setting": {
     "urlCheck": false,
-    "es6": false,
+    "es6": true,
     "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
@@ -41,7 +41,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.20.0",
   "appid": "wxb38eea4290968b12",
-  "projectname": "sust-epidemic-surveillance-applet",
+  "projectname": "graduation-picture-applet",
   "debugOptions": {
     "hidedInDevtools": []
   },

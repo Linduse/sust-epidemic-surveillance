@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "i-divider": "../../modules/dist/divider/index"
+  },
+  "navigationBarTitleText": "出行指南"
+
 }

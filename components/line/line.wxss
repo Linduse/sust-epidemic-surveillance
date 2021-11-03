@@ -1,4 +1,4 @@
-/* components/line/line.wxss */
+/* components/line/line.wxss *//* components/line/line.wxss */
 .container{
   height: 600rpx;
   width: 100%;

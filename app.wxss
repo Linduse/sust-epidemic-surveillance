@@ -3,7 +3,12 @@
 @import "/modules/colourUi/icon.wxss";
 @import "/modules/colourUi/main.wxss";
 @import "/modules/colourUi/animation.wxss";
-
+.driver {
+  height: 5rpx;
+  width: 100%;
+  border-top: rgb(189, 186, 186) solid 1rpx;
+  color: rgb(163, 161, 161);
+}
 .container {
   height: 100%;
   display: flex;

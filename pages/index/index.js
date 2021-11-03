@@ -1,7 +1,6 @@
 import request from '../../utils/request'
 import * as echarts from '../../ec-canvas/echarts';
 import geoJson from './china';
-
 Page({
 
   /**
@@ -44,6 +43,14 @@ Page({
       chinaEpidemicAddData:chinaEpidemicAddData.data.chinaEpidemicAddData
     })
   },
+  //获取各个省疫情累积确诊数据
+  async getAllProvinceEpidemicData(){
+    let dataList=await request('/api/v1/user/epidemic-data/getAllProvinceEpidemicData');
+    // console.log(dataList.data.list);
+    this.setData({
+      dataList:dataList.data.list
+    })
+  },
   //获取各个省疫情累积确诊数据，加载地图
   async getAllProvinceEpidemicData(){
     let dataList=await request('/api/v1/user/epidemic-data/getAllProvinceEpidemicData');
@@ -81,9 +88,6 @@ Page({
   //1.设置图标需要的option
 
   //2.初始化图表
-
-
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成

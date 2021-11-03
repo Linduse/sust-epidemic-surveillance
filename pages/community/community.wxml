@@ -1,16 +1,119 @@
 <!--pages/community/community.wxml-->
 <view class="contain">
+  <page-container 
+  show="{{show}}"
+  round="{{round}}"
+  overlay="{{overlay}}"
+  duration="{{duration}}"
+  position="{{position}}"
+  close-on-slide-down="{{false}}"
+  bindbeforeenter="onBeforeEnter"
+  bindenter="onEnter"
+  bindafterenter="onAfterEnter"
+  bindbeforeleave="onBeforeLeave"
+  bindleave="onLeave"
+  bindafterleave="onAfterLeave"
+  bindclickoverlay="onClickOverlay"
+  custom-style="{{customStyle}}"
+  overlay-style="{{overlayStyle}}"
+  >
+    <view class="section">
+      
+    </view>
+  </page-container>
+  
   <view class="header">
     <text style="color: white; text-align: center;margin: auto;">各地出行疫情防控政策</text>
     <!-- <image style="width: 100%;" src='/static/images/picture/zhinan.png' mode='widthFix'></image> -->
   </view>
   <view class="query">
+    <view class="top">
+      <view class="left">
+      <text style="color: rgb(55, 85, 182); line-height: 70rpx;">出发地 :</text>
+      <view>
+        <picker header-text="选择出发地" mode="multiSelector" bindchange="fromBindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange"  value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="from">
+            
+            {{multiArray[1][multiIndexFrom[1]]}}
+            <view style=" line-height: 70rpx;">
+              <image src="/static/images/picture/向下.png" style="height:40rpx; width: 40rpx;"></image>  
+            </view>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="icon">
+      <image src="/static/images/picture/改变方向.png" style="height:80rpx; width: 80rpx;"></image>
+    </view>
+    <view class="right">
+      <text  style="color: rgb(55, 85, 182); line-height: 70rpx;">目的地 :</text>
+      <view>
+        <picker header-text="选择目的地" mode="multiSelector" bindchange="toBindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="to">
+            <text wx:if="{{multiIndexTo.length === 0}}">请选择</text>
+            {{multiArray[1][multiIndexTo[1]]}}
+            <view style="line-height: 70rpx;">
+              <image src="/static/images/picture/向下.png" style="height:40rpx; width: 40rpx;"></image>  
+            </view>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="driver"></view>
+  <view style="color: rgb(163, 161, 161);">数据来源于中国政府官网，由31个省（自治区、直辖市）和新疆生产建设兵团联防联控机制提供数据</view>
+  </view>
+  <view class="leave">
+    <view class="leave-top">
+      <view class="leave-icon">出</view>
+      <view>
+        <view style="display: flex; margin-left: 10rpx; ">
+          <view style="font-size: 40rpx;font-weight: bolder;line-height: 40rpx">
+            离开{{from}}
+          </view>
+          <view style="color:{{fromColor}};margin-left: 20rpx;height: 41rpx;border: {{fromColor}} solid 1rpx;">
+            {{fromText}}
+          </view>
+        </view>
+        <view style="margin:15rpx 0rpx 20rpx 10rpx; font-size: 24rpx;">
+          内容由该地区于{{cityPolicy.locationTime}}报送，建议出行前先拨打当地电话咨询
+        </view>
+      </view>
+    </view>
+    <view class="driver"></view>
+    <view >giant；富家大室富家大室拉法基定时垃dsjalfkl撒金陵饭店是饥饿哦我就范德萨士大夫额分为粉GRE三个人发而人</view>
+    <view class="driver"></view>
+    <view style="text-align: center; margin: 30rpx 0 30rpx 0; color:rgb(55, 85, 182)">查看全文</view>
+  </view>
+  <view class="join">
+    <view class="leave-top">
+      <view class="leave-icon">入</view>
+      <view>
+        <view style="display: flex; margin-left: 10rpx; ">
+          <view style="font-size: 40rpx;font-weight: bolder;line-height: 40rpx">
+            进入{{to}}
+          </view>
+          <view style="color:{{toColor}};margin-left: 20rpx;height: 41rpx;border: {{toColor}} solid 1rpx;">
+            {{toText}}
+          </view>
+        </view>
+        <view style="margin:15rpx 0rpx 20rpx 10rpx; font-size: 24rpx;">
+          内容由该地区于{{cityPolicy.destinationTime}}报送，建议出行前先拨打当地电话咨询
+        </view>
+      </view>
+    </view>
+    <view class="driver"></view>
+    <view >giant；富家大室富家大室拉法基定时垃dsjalfkl撒金陵饭店是饥饿哦我就范德萨士大夫额分为粉GRE三个人发而人</view>
+    <view class="driver"></view>
+    <view style="text-align: center; margin: 30rpx 0 30rpx 0; color:rgb(55, 85, 182)">查看全文</view>
+=======
     <view>
       <text class="left">出发地 :</text>
     </view>
     <view class="right">
       <text>目的地 :</text>
     </view>
+>>>>>>> 39b44090f8f16be49a9abe83a50096c3c26a4bc4
   </view>
 </view>
 

@@ -1,9 +1,22 @@
+// components/line/line.js
 import * as echarts from '../../ec-canvas/echarts';
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
+    xdata:{
+      type:Array,
+      value:[]
+    },
+    ydata:{
+      type:Array,
+      value:[]
+    },
+    title:{
+      type:String,
+      value:""
+    },
     lineData:{
       type:Object,
       value:{
@@ -18,11 +31,13 @@ Component({
    * 组件的初始数据
    */
   data: {
+
+  },
+
     lineData:{},
     ec: {
       lazyLoad: true //设置图表懒加载
-    }
-  },
+    },
 
   lifetimes: {
     attached: function() {
@@ -63,6 +78,7 @@ Component({
         xAxis: {
           type: 'category',
           boundaryGap: false,
+          data: xdata,
           data: lineData.xdata,
           // show: false
         },
@@ -80,6 +96,7 @@ Component({
           name: 'A',
           type: 'line',
           smooth: true,
+          data: ydata,
           data: lineData.ydata
         }]
       };
@@ -95,6 +112,7 @@ Component({
           devicePixelRatio: dpr // new
         });
       canvas.setChart(chart);
+      this.setOption(char,xdata,ydata,title)//赋值给echarts图标
       this.setOption(chart,lineData)//赋值给echarts图标
       this.chart = chart
       return chart
