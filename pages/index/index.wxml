@@ -58,4 +58,22 @@
 	</view>
 
   <chinamap  dataList="{{dataList}}" dataPoint="{{dataPoint}}" id="mapComponent" />
+  <view class="mapButtonContainer">
+    <i-button bind:click="getAllProvinceEpidemicData" size="small">累计确诊地图</i-button>
+    <i-button bind:click="getAllProvinceNowConfirmData" size="small">现有确诊地图</i-button>
+  </view>
+
+  <view class="mapContainer">
+    <chinamap  dataList="{{dataList}}" dataPoint="{{dataPoint}}" chinaMapTitle="{{chinaMapTitle}}" id="mapComponent" />
+  </view>
+
+ 
+  <view class="lineButtonContainer">
+    <i-button bind:click="getLatelyAddConfirmEpidemicData" size="small">新增确诊趋势</i-button>
+    <i-button bind:click="getLatelyImportedCaseEpidemicData" size="small">境外输入趋势</i-button>
+  </view>
+  <view class="lineContainer">
+    <line  lineData="{{lineData}}" id="lineComponent" />
+  </view>
+>>>>>>> 39b44090f8f16be49a9abe83a50096c3c26a4bc4
 </view>

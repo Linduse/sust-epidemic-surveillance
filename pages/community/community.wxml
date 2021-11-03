@@ -106,6 +106,14 @@
     <view >giant；富家大室富家大室拉法基定时垃dsjalfkl撒金陵饭店是饥饿哦我就范德萨士大夫额分为粉GRE三个人发而人</view>
     <view class="driver"></view>
     <view style="text-align: center; margin: 30rpx 0 30rpx 0; color:rgb(55, 85, 182)">查看全文</view>
+=======
+    <view>
+      <text class="left">出发地 :</text>
+    </view>
+    <view class="right">
+      <text>目的地 :</text>
+    </view>
+>>>>>>> 39b44090f8f16be49a9abe83a50096c3c26a4bc4
   </view>
 </view>
 

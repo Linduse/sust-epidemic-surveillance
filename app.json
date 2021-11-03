@@ -5,7 +5,6 @@
     "pages/logs/logs",
     "pages/personal/personal",
     "pages/news/news"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -45,5 +44,20 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+
+  "sitemapLocation": "sitemap.json",
+  "subpackages ": [
+    {
+      "root": "components",
+      "pages": [
+        "components/chinamap",
+        "components/line"
+      ]
+    }, {
+      "root": "pages",
+      "pages": [
+        "index/index"
+      ]
+    }
+  ]
 }

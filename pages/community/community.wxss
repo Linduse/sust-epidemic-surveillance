@@ -16,11 +16,11 @@
   line-height: 120rpx;
   /* margin: auto; */
   background-image: linear-gradient(to top,rgb(64, 82, 139),rgb(8, 48, 179));
-  
 }
 .query {
   width: auto;
   min-height: 320rpx;
+  min-height: 300rpx;
   height: auto;
   background-color: #fff;
   position: absolute;

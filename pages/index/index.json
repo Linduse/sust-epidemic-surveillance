@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "i-button": "../../modules/dist/button/index",
-    "chinamap":"../../components/chinamap/chinamap"
+    "chinamap":"../../components/chinamap/chinamap",
+    "line":"../../components/line/line"
   },
   "navigationBarTitleText": "疫情大数据"
 }
