@@ -69,4 +69,8 @@
   <view class="lineContainer">
     <line  lineData="{{lineData}}" id="lineComponent" />
   </view>
+
+  <view class="formContainer">
+  <block wx:for="chinaAllProvinceEpidemicData"
+  </view>
 </view>

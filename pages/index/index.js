@@ -17,7 +17,8 @@ Page({
       xdata:[],//折线图日期
       ydata:[],//折线图数据
       lineTitle:""//折线图标题
-    }
+    },
+    chinaAllProvinceEpidemicData:{}
   },
 
   /**
