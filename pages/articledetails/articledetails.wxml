@@ -1,0 +1,11 @@
+<!--pages/articledetails/articledetails.wxml-->
+<view class="indexContainer">
+
+<view class="title">
+{{article.title}}
+</view>
+<view class="article">
+<rich-text nodes="{{article.content}}"></rich-text>
+</view>
+
+</view>

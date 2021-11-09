@@ -1,55 +1,39 @@
-// pages/news/news.js
+// pages/articledetails/articledetails.js
 import request from '../../utils/request'
 Page({
 
   /**
    * 页面的初始数据
-   */
+   */ 
   data: {
-
-    headerPictureUrl:"/static/images/picture/header.png",//顶部图片地址
-    nav: ["今日资讯","科大要闻","通知公告","防控知识"],//导航栏
-    navSelect:0,
-    articleList:[]
+    articleId:0,
+    article:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getArticleListByType()
+    console.log(options)
+    this.data.articleId=options.id
+    console.log(this.data.articleId);
+    this.getArticleById()
   },
 
-  //更换资讯类型
-  changeNavSelect:function(navSelect){
+  //根据文章Id获取文章详情
+  async getArticleById(){
+    let data=await request('/api/v1/user/article/getArticleById'+'/'+this.data.articleId);
     this.setData({
-      navSelect:navSelect.target.dataset.navselect
-     })
-     this.getArticleListByType()
-  },
-  //产看资讯详情
-  viewDetails:function(articleId){
-    const id=articleId.target.dataset.articleid; 
-    wx.navigateTo({
-      url: '../articledetails/articledetails?id='+id,
+      article:data.data.article
     })
   },
-    //获取文章标题列表
-    async getArticleListByType(){
-      let data=await request('/api/v1/user/article/getArticleListByType'+'/'+this.data.navSelect);
-      this.setData({
-        articleList:data.data.list
-      })
-    },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
-
-
 
   /**
    * 生命周期函数--监听页面显示

@@ -5,23 +5,12 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    xdata:{
-      type:Array,
-      value:[]
-    },
-    ydata:{
-      type:Array,
-      value:[]
-    },
-    title:{
-      type:String,
-      value:""
-    },
     lineData:{
       type:Object,
       value:{
         xdata:[],
-        ydata:[],
+        ydata1:[],
+        ydata2:[],
         lineTitle:""
       }
     }
@@ -68,6 +57,13 @@ Component({
           text: lineData.lineTitle,
           left: 'center'
         },
+        legend: {
+          data: ['国内', '国外'],
+          top: 50,
+          left: 'right',
+          backgroundColor: 'white',
+          z: 100
+        },
         grid: {
           containLabel: true
         },
@@ -91,12 +87,20 @@ Component({
           }
           // show: false
         },
-        series: [{
-          name: 'A',
+        series: [
+          {
+          name: '国内',
           type: 'line',
           smooth: true,
-          data: lineData.ydata
-        }]
+          data: lineData.ydata1
+        },
+        {
+          name: '国外',
+          type: 'line',
+          smooth: true,
+          data: lineData.ydata2
+        }
+      ]
       };
       chart.setOption(option);
     },

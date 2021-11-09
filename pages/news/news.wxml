@@ -1,2 +1,26 @@
-<!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<view class="indexContainer">
+<!--顶部图片-->
+<view class="header">
+ <cover-image wx:if="{{headerPictureUrl}}" src="{{headerPictureUrl}}"></cover-image>
+</view>
+
+<!--导航栏-->
+<view class="nav">
+<view class="{{navSelect == 0?'itemSelect':'item'}}" bindtap="changeNavSelect" data-navSelect="0">{{nav[0]}}</view>
+<view class="{{navSelect == 1?'itemSelect':'item'}}" bindtap="changeNavSelect" data-navSelect="1">{{nav[1]}}</view>
+<view class="{{navSelect == 2?'itemSelect':'item'}}" bindtap="changeNavSelect" data-navSelect="2">{{nav[2]}}</view>
+<view class="{{navSelect == 3?'itemSelect':'item'}}" bindtap="changeNavSelect" data-navSelect="3">{{nav[3]}}</view>
+</view>
+
+<view class="title">{{nav[navSelect]}}</view>
+<!--正文-->
+<view class="content">
+  <view wx:for="{{articleList}}" wx:for-index="id" wx:for-item="article">
+  <view class="articleItem" bindtap="viewDetails" data-articleId="{{article.id}}">
+  {{article.title}}
+  </view>
+  </view>
+
+</view>
+
+</view>

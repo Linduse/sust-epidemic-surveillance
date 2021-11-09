@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/news/news",
     "pages/index/index",
     "pages/community/community",
     "pages/logs/logs",
     "pages/personal/personal",
-    "pages/news/news"
+    "pages/articledetails/articledetails"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -52,7 +53,8 @@
         "components/chinamap",
         "components/line"
       ]
-    }, {
+    },
+    {
       "root": "pages",
       "pages": [
         "index/index"

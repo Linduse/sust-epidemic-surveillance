@@ -2,6 +2,18 @@ import * as echarts from '../../ec-canvas/echarts';
 import geoJson from './china.js';
 Component({
   /**
+   * 组件的初始数据
+   */
+  data: {
+    ec: {
+      lazyLoad: true //设置图表懒加载
+    }
+    ,
+    dataList: [],
+    chinaMapTitle:""
+  },
+
+  /**
    * 组件的属性列表
    */
   properties: {
@@ -16,21 +28,10 @@ Component({
     },
     chinaMapTitle:{
       type:String,
-      value:""
+      value:"中国疫情累计确诊地图"
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-    ec: {
-      lazyLoad: true //设置图表懒加载
-    }
-    ,
-    dataList: [],
-    chinaMapTitle:""
-  },
+  
   lifetimes: {
     attached: function() {
         // 在组件实例进入页面节点树时执行
@@ -55,7 +56,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-      getData(dataList,chinaMapTitle) {
+      getData(dataList) {
           this.initChart(dataList,this.data.chinaMapTitle);
       },
       initChart(dataList,chinaMapTitle) {
@@ -147,4 +148,3 @@ Component({
       },
   }
 })
-

@@ -41,7 +41,7 @@
   }
   .data-detail {
     width: 100%;
-    height: 500rpx;
+    height: 600rpx;
     display: flex;
     background-color: white;
     margin:  0rpx 20rpx 30rpx 0;
@@ -56,6 +56,7 @@
     margin: 10rpx;
     text-align: center;
     background: #eee;
+    padding: 10rpx
   }
   .nav{
     height: 70rpx;
@@ -71,6 +72,8 @@
     margin-right: 20rpx;
   }
 
+
+  /*地图*/
   .mapButtonContainer{
     display: flex;
     margin: 10rpx 20rpx 20rpx 20rpx;
@@ -79,6 +82,7 @@
     background-color: white;
     margin: 10rpx 20rpx 20rpx 20rpx;
   }
+  /*折线图*/
   .lineButtonContainer{
     display: flex;
     margin: 10rpx 20rpx 20rpx 20rpx;
@@ -87,7 +91,24 @@
     background-color: white;
     margin: 10rpx 20rpx 20rpx 20rpx;
   }
-  
+  /*树形表格*/
+  .formContainer{
+    background-color: white;
+    margin: 10rpx 20rpx 20rpx 20rpx;
+  }
 
+  .barButtonContainer{
+    display: flex;
+    margin: 70rpx 20rpx 20rpx 20rpx;
+  }
+ 
+
+
+
+
+  .footContainer{
+    height: 100rpx;
+    width: 100%;
+  }
   
 

@@ -5,7 +5,7 @@
 	</view>
     <view class="context">
 					<view class="statistics">
-						<view class="national">全国疫情</view>
+						<view class="national">国内疫情</view>
 						<view class="time">统计时间：{{chinaEpidemicTotalData.gmtModified}}</view>
 					</view>
 					<view class="data-detail">
@@ -52,25 +52,103 @@
 					</view>
   </view>
   <!--地图-->
+  <view class="nav">
+			<view class="icon"></view>
+			<view class="national">疫情速报</view>
+</view>
+    <view class="formContainer">
+      <treeGrid tbodyList="{{tAddBodyData}}" theadList="{{tAddHeadData}}"></treeGrid>
+    </view>
+
   <view class="mapButtonContainer">
-    <i-button bind:click="getAllProvinceEpidemicData" size="small">累计确诊地图</i-button>
-    <i-button bind:click="getAllProvinceNowConfirmData" size="small">现有确诊地图</i-button>
+    <button bindtap="getAllProvinceEpidemicData"  size="small" style="font-size: 30rpx;">累计确诊地图</button>
+    <button bindtap="getAllProvinceNowConfirmData" size="small" style="font-size: 30rpx;">现有确诊地图</button>
   </view>
 
   <view class="mapContainer">
-    <chinamap  dataList="{{dataList}}" dataPoint="{{dataPoint}}" chinaMapTitle="{{chinaMapTitle}}" id="mapComponent" />
+    <chinamap  dataList="{{dataList}}"  dataPoint="{{dataPoint}}" chinaMapTitle="{{chinaMapTitle}}" id="mapComponent" />
   </view>
 
  
   <view class="lineButtonContainer">
-    <i-button bind:click="getLatelyAddConfirmEpidemicData" size="small">新增确诊趋势</i-button>
-    <i-button bind:click="getLatelyImportedCaseEpidemicData" size="small">境外输入趋势</i-button>
+    <button bindtap="getLatelyAddConfirmEpidemicData" size="small" style="font-size: 30rpx;">新增确诊趋势</button>
+    <button bindtap="getLatelyImportedCaseEpidemicData" size="small" style="font-size: 30rpx;">境外输入趋势</button>
   </view>
   <view class="lineContainer">
     <line  lineData="{{lineData}}" id="lineComponent" />
   </view>
 
+ <!--树形表格-->
   <view class="formContainer">
-  <block wx:for="chinaAllProvinceEpidemicData"
+  <treeGrid tbodyList="{{tbodyData}}" theadList="{{theadData}}"></treeGrid>
   </view>
+
+  <view class="context">
+					<view class="statistics">
+						<view class="national">国外疫情</view>
+						<view class="time">统计时间：{{worldEpidemicTotalData.gmtModified}}</view>
+					</view>
+					<view class="data-detail">
+						<view class="item" style="color: aquas;">
+							<view>现有确诊</view>
+              <view style="color: #ff6a57;">{{worldEpidemicTotalData.existingDiagnosis}}</view>
+              <view style="font-size: 20rpx;color:#ff6a57">较昨日+{{worldEpidemicAddData.existingDiagnosis}}</view>
+						</view>
+						<view class="item">
+							<view>累计确诊</view>
+              <view style="color: #e86d48;">{{worldEpidemicTotalData.totalDiagnosis}}</view>
+              <view style="font-size: 20rpx;color:#e86d48">较昨日+{{worldEpidemicAddData.totalDiagnosis}}</view>
+						</view>
+						<view class="item">
+							<view>累计死亡</view>
+              <view style="color: #4d5054;">{{worldEpidemicTotalData.totalDeath}}</view>
+              <view style="font-size: 20rpx;color:#4d5054">较昨日+{{worldEpidemicAddData.totalDeath}}</view>
+						</view>
+            <view class="item">
+              <view>病死率</view>
+              <view style="color:#4d5054;">{{worldEpidemicAddData.deadRate+"%"}}</view>
+						</view>
+						<view class="item">
+              <view>累计治愈</view>
+              <view style="color: #10aeb5;">{{worldEpidemicTotalData.totalCure}}</view>
+              <view style="font-size: 20rpx;color:#10aeb5">较昨日+{{worldEpidemicAddData.totalCure}}</view>
+						</view>
+            <view class="item">
+							<view>治愈率</view>
+              <view style="color: #10aeb5;">{{worldEpidemicAddData.healRate+"%"}}</view>
+						</view>
+					</view>
+  </view>
+  <view class="mapButtonContainer">
+    <button bindtap="getAllCountryEpidemic"  size="small" style="font-size: 30rpx;">累计确诊地图</button>
+    <button bindtap="getAllCountryNowConfirmEpidemicData" size="small" style="font-size: 30rpx;">现有确诊地图</button>
+  </view>
+  <view class="mapContainer">
+    <worldmap  worldDataList="{{dataList}"  worldDataList="{{worldDataList}}" worldMapTitle="{{worldMapTitle}}" id="mapComponent" />
+  </view>
+
+  <view class="barButtonContainer">
+   <button bindtap="changeBarType" data-type="1" size="mini" style="font-size: 25rpx; background-color: #e83132;">累积确诊</button>
+   <button bindtap="changeBarType" data-type="2" size="mini" style="font-size: 25rpx; background-color: #ff6a57;">现有确诊</button>
+   <button bindtap="changeBarType" data-type="3" size="mini" style="font-size: 25rpx; background-color: #ec9217;">新增确诊</button>
+   <button bindtap="changeBarType" data-type="4" size="mini" style="font-size: 25rpx; background-color: #4e4d542f;">累积死亡</button>
+   <button bindtap="changeBarType" data-type="5" size="mini" style="font-size: 25rpx; background-color: #1073b5e1;">累积治愈</button>
+  </view>
+
+  <view class="lineContainer">
+    <bar  barData="{{barData}}" id="barComponent" />
+  </view>
+   
+  <view class="lineContainer">
+    <trendline  lineData="{{chinaAndWorldAddConfirmTrend}}" id="barComponent" />
+  </view>
+
+  <view class="formContainer">
+  <treeGrid tbodyList="{{tGlobalBodyData}}" theadList="{{tGlobalHeadData}}"></treeGrid>
+  </view>
+
+<view class="footContainer">
+
+</view>
+
 </view>

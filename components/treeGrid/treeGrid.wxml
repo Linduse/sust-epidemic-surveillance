@@ -1,0 +1,15 @@
+<view class="tableContainer">
+  <view class="table">
+    <view class="tr th">
+      <view class="td" wx:if="{{theadList[0]}}">{{theadList[0]}}</view>
+      <view class="td" wx:if="{{theadList[1]}}">{{theadList[1]}}</view>
+      <view class="td" wx:if="{{theadList[2]}}">{{theadList[2]}}</view>
+      <view class="td" wx:if="{{theadList[3]}}">{{theadList[3]}}</view>
+      <view class="td" wx:if="{{theadList[4]}}">{{theadList[4]}}</view>
+      <view class="td" wx:if="{{theadList[5]}}">{{theadList[5]}}</view>
+    </view>
+    <view class="tbody">
+      <treeLine model="{{tbodyList}}"></treeLine>
+    </view>
+  </view>
+</view>

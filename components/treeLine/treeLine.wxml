@@ -1,0 +1,21 @@
+<!--components/treeLine/treeLine.wxml-->
+<view class="container">
+  <view>
+    <view class="tr">
+      <view class="td col indent{{model.index}}">
+        <image wx:if="{{model.flag}}" src="{{open ? '/image/page_turning_right.png' : '/image/show_more.png'}}" bindtap="toggle"></image>
+        <image wx:else src="/image/page_turning_right.png"></image>
+        <text>{{model.areaName}}</text>
+      </view>
+      <view class="td" wx:if="{{model.nowConfirm}}">{{model.nowConfirm}}</view>
+      <view class="td" wx:if="{{model.suspect}}">{{model.suspect}}</view>
+      <view class="td" wx:if="{{model.confirm}}">{{model.confirm}}</view>
+      <view class="td" wx:if="{{model.heal}}">{{model.heal}}</view>
+      <view class="td" wx:if="{{model.dead}}">{{model.dead}}</view>
+      <view class="td" wx:if="{{model.addConfirm}}">{{model.addConfirm}}</view>
+    </view>
+  </view>
+  <view hidden='{{ !open }}'>
+    <treeLine wx:for='{{ model.nodes }}' wx:key='deviceName' model='{{ item }}'></treeLine>
+  </view>
+</view>

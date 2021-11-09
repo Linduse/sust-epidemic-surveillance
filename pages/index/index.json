@@ -2,7 +2,11 @@
   "usingComponents": {
     "i-button": "../../modules/dist/button/index",
     "chinamap":"../../components/chinamap/chinamap",
-    "line":"../../components/line/line"
+    "worldmap":"../../components/worldmap/worldmap",
+    "line":"../../components/line/line",
+    "treeGrid": "/components/treeGrid/treeGrid",
+    "bar": "/components/bar/bar",
+    "trendline":"/components/trendline/trendline"
   },
   "navigationBarTitleText": "疫情大数据"
 }
