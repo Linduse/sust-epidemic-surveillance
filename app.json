@@ -1,64 +1,81 @@
 {
-  "pages": [
-    "pages/news/news",
-    "pages/index/index",
-    "pages/community/community",
-    "pages/logs/logs",
-    "pages/personal/personal",
-    "pages/articledetails/articledetails"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#10aeb5",
-    "navigationBarTitleText": "SUST疫情监测管理平台",
-    "navigationBarTextStyle": "white"
-  },
-  "tabBar": {
-    "color": "#333",
-    "selectedColor": "#10acb3",
-    "backgroundColor": "#fff",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "主页",
-        "iconPath": "/static/images/tubiao/tab/shouye.png",
-        "selectedIconPath": "/static/images/tubiao/current/shouye.png"
-      },
-      {
-        "pagePath": "pages/news/news",
-        "text": "资讯",
-        "iconPath": "/static/images/tubiao/tab/news.png",
-        "selectedIconPath": "/static/images/tubiao/current/news.png"
-      },
-      {
-        "pagePath": "pages/community/community",
-        "text": "指南",
-        "iconPath": "/static/images/tubiao/tab/community.png",
-        "selectedIconPath": "/static/images/tubiao/current/community.png"
-      },
-      {
-        "pagePath": "pages/personal/personal",
-        "text": "个人中心",
-        "iconPath": "/static/images/tubiao/tab/zhongxin.png",
-        "selectedIconPath": "/static/images/tubiao/current/zhongxin.png"
-      }
-    ]
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "subpackages ": [
-    {
-      "root": "components",
-      "pages": [
-        "components/chinamap",
-        "components/line"
-      ]
-    },
-    {
-      "root": "pages",
-      "pages": [
-        "index/index"
-      ]
-    }
-  ]
-}
+    "pages": [
+      "pages/community/community",
+      "pages/index/index",
+      "pages/logs/logs",
+      "pages/news/news",
+      "pages/policydetail/policydetail",
+      "components/detailpolicy/detailpolicy",
+      "pages/personal/personal"
+    ],
+    "plugins": {
+      "citySelector": {
+        "version": "1.0.0",
+        "provider": "wx63ffb7b7894e99ae"
+      },
+      "routePlan": {
+        "version": "1.0.14",
+        "provider": "wx50b5593e81dd937a"
+      }
+    },
+    "permission": {
+      "scope.userLocation": {
+        "desc": "你的位置信息将用于小程序位置接口的效果展示"
+      }
+    },
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#10aeb5",
+      "navigationBarTitleText": "疫助手",
+      "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+      "color": "#333",
+      "selectedColor": "#10acb3",
+      "backgroundColor": "#fff",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "主页",
+          "iconPath": "/static/images/tubiao/tab/shouye.png",
+          "selectedIconPath": "/static/images/tubiao/tab/shouye1.png"
+        },
+        {
+          "pagePath": "pages/news/news",
+          "text": "资讯",
+          "iconPath": "/static/images/tubiao/tab/news.png",
+          "selectedIconPath": "/static/images/tubiao/tab/news1.png"
+        },
+        {
+          "pagePath": "pages/community/community",
+          "text": "出行指南",
+          "iconPath": "/static/images/tubiao/tab/community.png",
+          "selectedIconPath": "/static/images/tubiao/current/community.png"
+        },
+       
+        {
+          "pagePath": "pages/personal/personal",
+          "text": "核酸指南",
+          "iconPath": "/static/images/tubiao/tab/核酸检测.png",
+          "selectedIconPath": "/static/images/tubiao/tab/核酸检测2.png"
+        }
+      ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "subpackages ": [
+      {
+        "root": "components",
+        "pages": [
+          "components/chinamap",
+          "components/line"
+        ]
+      },
+      {
+        "root": "pages",
+        "pages": [
+          "index/index"
+        ]
+      }
+    ]
+  }
