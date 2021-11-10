@@ -9,8 +9,18 @@ Page({
 
     headerPictureUrl:"/static/images/picture/header.png",//顶部图片地址
     nav: ["今日资讯","科大要闻","通知公告","防控知识"],//导航栏
-    navSelect:0,
-    articleList:[]
+    navSelect:1,
+    articleList:[
+      {
+        title:"北京化工大学刘永春教授做客我校“前沿科学报告”-陕西科技大学"
+      },
+      {
+        title:"杨帆老师团队获第一届全国高校电子信息类专业课程实验教学案例设计竞赛一等奖-陕西科技大学"
+      },
+      {
+        title:"我校荣获“2021年易班优课大学生党史学习知识竞赛”百强高校优秀组织奖-陕西科技大学"
+      }
+    ]
   },
 
   /**
@@ -29,6 +39,7 @@ Page({
   },
   //产看资讯详情
   viewDetails:function(articleId){
+    console.log(articleId);
     const id=articleId.target.dataset.articleid; 
     wx.navigateTo({
       url: '../articledetails/articledetails?id='+id,

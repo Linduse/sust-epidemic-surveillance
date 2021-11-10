@@ -36,13 +36,30 @@
   flex-direction: row-reverse;
   background-color: white;
 }
+.title{
+  height: 100rpx;
+  width: 150rpx;
+  text-align: center;
+  font-style: italic;
+  color: rgb(72, 43, 95);
+  background-color: rgba(95, 158, 160,0.6);
+  padding-top: 3%;
+ font-size: 30rpx;
+ box-shadow: 10rpx 20rpx rgb(184, 190, 190);
+ font-family: "楷体";
+}
 .articleItem{
   height: 100rpx;
   font-size: 30rpx;
   width: 100%;
   border-width:5rpx;
-  border-bottom-style:dotted;
-  border-color:red;
+  margin: 10rpx 10rpx 10rpx 0;
+  border-bottom:solid rgba(83, 83, 80, 0.062);
+  background-color: rgba(227, 224, 230,0.3);
+  padding-right: 10rpx;
+}
+.articleItem:hover{
+ 
 }
 
 

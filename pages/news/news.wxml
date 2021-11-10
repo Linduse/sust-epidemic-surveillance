@@ -16,8 +16,8 @@
 <!--正文-->
 <view class="content">
   <view wx:for="{{articleList}}" wx:for-index="id" wx:for-item="article">
-  <view class="articleItem" bindtap="viewDetails" data-articleId="{{article.id}}">
-  {{article.title}}
+  <view class="articleItem" >
+  <view class="iconfont icon-dian" bindtap="viewDetails" data-articleId="{{article.id}}">{{article.title}}</view>
   </view>
   </view>
 

@@ -19,3 +19,25 @@
   box-sizing: border-box;
   /* background-color: pink; */
 } 
+
+
+@font-face {
+  font-family: "iconfont"; /* Project id 2927203 */
+  src: url('//at.alicdn.com/t/font_2927203_matq1dfvwe.woff2?t=1636511321927') format('woff2'),
+       url('//at.alicdn.com/t/font_2927203_matq1dfvwe.woff?t=1636511321927') format('woff'),
+       url('//at.alicdn.com/t/font_2927203_matq1dfvwe.ttf?t=1636511321927') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dian:before {
+  content: "\ec1e";
+}
+
+

@@ -1,1 +1,12 @@
 /* pages/articledetails/articledetails.wxss */  
+.indexContainer{
+  text-indent: 2em;
+  font-family: 宋体,SimSum;
+  font-size: 38rpx;
+  margin-bottom: 4rpx;
+  line-height: 2em;
+}
+.vsbcontent_img{
+  width: 100rpx;
+  height: auto;
+}
