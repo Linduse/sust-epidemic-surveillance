@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+ "navigationBarTitleText": "核酸检测指南",
+ "usingComponents": {
+  "avatar": "../../modules/dist/avatar/index",
+  "selector-component": "plugin://citySelector/selector-component",
+  "i-icon": "../../modules/dist/icon/index"
+}
+
 }

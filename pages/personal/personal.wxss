@@ -1,1 +1,30 @@
 /* pages/personal/personal.wxss */
+.contain {
+  height: 1100rpx;
+  width: 100%;
+  background-color: #eee;
+  flex: auto;
+  word-wrap:break-word; 
+}
+.card {
+  width: 96%;
+  height: auto;
+  min-height: 90rpx;
+  margin-left: 2%;
+  background-color: white;
+  border-radius: 10rpx;
+  text-align: center;
+  padding-top: 10rpx;
+  position: absolute;
+  bottom: 0;
+}
+.search {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 10rpx;
+  background-color: #eee;
+  border-radius: 10rpx;
+  display: flex;
+}

@@ -1,2 +1,81 @@
 <!--pages/policydetail/policydetail.wxml-->
-<text>pages/policydetail/policydetail.wxml</text>
+<view>
+  <view class="section">
+      <view class="cityPolicy">
+        <view class="cityPolicyHeader">
+          <view class="policyTitle">
+            <text>{{city}}</text>
+            <text>疫情防控政策</text>
+          </view>
+          <view class="policyTime">
+            <text>内容由该地区于{{detailCityPolicy.createTime}}报送，建议出行前先拨打当地电话咨询</text>
+          </view>
+        </view>
+        <view class="driver"></view>
+        <view wx:if="{{clickFrom =='true'}}" class="policyContext">
+          <rich-text>{{detailCityPolicy.leavePolicy}}</rich-text>
+        </view>
+        <view wx:else class="policyContext">
+          <rich-text>{{detailCityPolicy.comePolicy}}</rich-text>
+        </view>
+      </view>
+      
+      <view class="traffic cityPolicy">
+        <view class="trafficTitle">
+          <text>{{city}}</text>
+          <text>交通政策</text>
+        </view>
+        <view class="driver"></view>
+        <view class="nav">
+          <view class="item {{index==1?'active':''}}" bindtap="traffic" data-index="1">民航</view>
+          <view class="item {{index==2?'active':''}}"  bindtap="traffic" data-index="2">铁路</view>
+          <view class="item {{index==3?'active':''}}" bindtap="traffic" data-index="3">公路</view>
+          <view class="item {{index==4?'active':''}}" bindtap="traffic" data-index="4">水路</view>
+        </view>
+        <view class="trafficContext">
+          <view wx:if="{{index==1}}" class="context">{{detailCityPolicy.aviation}}</view>
+          <view wx:if="{{detailCityPolicy.aviation == null}}" style="height: 300rpx; width: 100%;text-align: center;">
+            <view style="padding-top: auto; margin-top: 150rpx;">
+              <image src="/static/images/picture/文件搜索.png" style="height: 150rpx; width: 150rpx; line-height: 400rpx;"></image>
+            </view>
+            <view style="text-align: center; color: #8a8a8a;">此地区暂无航空疫情防控政策</view>
+          </view>
+          <view wx:if="{{index==2}}" class="context">{{detailCityPolicy.railway}}</view>
+          <view wx:if="{{detailCityPolicy.railway == null}}" style="height: 300rpx; width: 100%;text-align: center;">
+            <view style="padding-top: auto; margin-top: 150rpx;">
+              <image src="/static/images/picture/文件搜索.png" style="height: 150rpx; width: 150rpx; line-height: 400rpx;"></image>
+            </view>
+            <view style="text-align: center; color: #8a8a8a;">此地区暂无铁路疫情防控政策</view>
+          </view>
+          <view wx:if="{{index==3 }}" class="context">{{detailCityPolicy.highway}}</view>
+          <view wx:if="{{detailCityPolicy.highway == null}}" style="height: 300rpx; width: 100%;text-align: center;">
+            <view style="padding-top: auto; margin-top: 150rpx;">
+              <image src="/static/images/picture/文件搜索.png" style="height: 150rpx; width: 150rpx; line-height: 400rpx;"></image>
+            </view>
+            <view style="text-align: center; color: #8a8a8a;">此地区暂无高铁疫情防控政策</view>
+          </view>
+          <view wx:if="{{index==4}}" class="context">
+            {{detailCityPolicy.waterway}}
+            <view wx:if="{{detailCityPolicy.waterway == null}}" style="height: 300rpx; width: 100%;text-align: center;">
+              <view style="padding-top: auto; margin-top: 150rpx;">
+                <image src="/static/images/picture/文件搜索.png" style="height: 150rpx; width: 150rpx; line-height: 400rpx;"></image>
+              </view>
+              <view style="text-align: center; color: #8a8a8a;">此地区暂无水路疫情防控政策</view>
+            </view>
+          </view>
+          
+        </view>
+      </view>
+      <view class="serverPhone cityPolicy">
+        <view class="phoneHeader">
+          <view style="font-weight: bolder; font-size: 40rpx;">疫情防控咨询电话</view>
+          <view class="driver"></view>
+          <view class="phoneContext" wx:for="{{detailCityPolicy.cityPhone}}" wx:if="{{index <= num}}">
+            <view>{{item.county}}</view>
+            <veiw style="margin-left: auto; color: blue;" bindtap="phone" data-number="{{item.telephone}}">{{item.telephone}}</veiw>
+          </view>
+          <button bindtap="all" type="success" wx:if="num <= 3" style="color: black;" plain="true;">查看全部</button>
+        </view>
+      </view>
+    </view>
+</view>
