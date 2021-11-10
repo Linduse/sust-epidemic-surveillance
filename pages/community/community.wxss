@@ -15,11 +15,10 @@
   text-align: center;
   line-height: 120rpx;
   /* margin: auto; */
-  background-image: linear-gradient(to top,rgb(64, 82, 139),rgb(8, 48, 179));
+  background-image: linear-gradient(to top,#10aeb5,rgb(64, 82, 139));
 }
 .query {
   width: auto;
-  min-height: 320rpx;
   min-height: 300rpx;
   height: auto;
   background-color: #fff;
@@ -30,18 +29,18 @@
   border-radius: 20rpx;
   text-align: center;
   padding: 40rpx 80rpx 0rpx 80rpx;
+  box-shadow: 3rpx 3rpx 3rpx 3rpx rgb(216, 209, 209);
 }
 .picker{
   padding: 13px;
   background-color: #FFFFFF;
 }
 .top {
-  
   display: flex;
-  height: 200rpx;
+  height: 170rpx;
 }
 .left {
-  height: 10%;
+  height: 50rpx;
 }
 .from {
   font-size: 40rpx;
@@ -55,7 +54,7 @@
   margin-left: auto;
 }
 .right {
-  height: 40%;
+  height: 50rpx;
   margin-left: auto;
 }
 .to {
@@ -70,22 +69,22 @@
   height: auto;
   background-color: #fff;
   position: absolute;
-  top: 500rpx;
+  top: 560rpx;
   right: 20rpx;
   left: 20rpx;
   padding: 40rpx 30rpx 0rpx 20rpx;
-}
+  box-shadow: 3rpx 3rpx 3rpx 3rpx rgb(216, 209, 209);}
 .join {
   width: auto;
   min-height: 110rpx;
   height: auto;
   background-color: #fff;
   position: absolute;
-  top: 900rpx;
+  top: 1220rpx;
   right: 20rpx;
   left: 20rpx;
   padding: 40rpx 30rpx 0rpx 20rpx;
-}
+  box-shadow: 2rpx 2rpx 2rpx 2rpx rgb(216, 209, 209);}
 .leave-top {
   width: 100%;
   height: auto;
@@ -100,5 +99,13 @@
   line-height: 46rpx;
   background-color: rgb(27, 55, 177);
   margin-left: 10rpx;
+}
+.fromContext {
+  height: auto;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; 
+  -webkit-line-clamp: 7; /* 可以显示的行数，超出部分用...表示*/
+  -webkit-box-orient: vertical;
 }
 

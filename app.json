@@ -39,13 +39,13 @@
         "pagePath": "pages/index/index",
         "text": "主页",
         "iconPath": "/static/images/tubiao/tab/shouye.png",
-        "selectedIconPath": "/static/images/tubiao/tab/shouye1.png"
+        "selectedIconPath": "/static/images/tubiao/tab/shouye.png"
       },
       {
         "pagePath": "pages/news/news",
         "text": "资讯",
         "iconPath": "/static/images/tubiao/tab/news.png",
-        "selectedIconPath": "/static/images/tubiao/tab/news1.png"
+        "selectedIconPath": "/static/images/tubiao/tab/news.png"
       },
       {
         "pagePath": "pages/community/community",
