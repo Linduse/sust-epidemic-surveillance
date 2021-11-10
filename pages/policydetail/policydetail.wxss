@@ -38,6 +38,7 @@
   font-weight: bolder;
 }
 .nav {
+  margin-top: 20rpx;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
